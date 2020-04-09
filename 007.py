@@ -25,6 +25,13 @@ def main():
 # Practice 2: Verify Code
 import random
 def generate_code(code_len=4):
+    """
+    Generate fix length verify code
+
+    :param code_len: the length of verify code
+
+    :return: code that group by alpha and number
+    """
     all_chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
     last_pos = len(all_chars) -1
     code = ''
@@ -35,6 +42,13 @@ def generate_code(code_len=4):
 
 # Practice 3: postfix name of files
 def get_suffix(filename, has_dot=False):
+    """
+    get the suffix of file
+
+    :param filename: name of file
+    :param has_dot: if need dot with suffix
+    :return: the suffix of file
+    """
     pos = filename.rfind('.')
     if 0< pos < len(filename)-1:
         index = pos if has_dot else pos + 1
@@ -55,9 +69,23 @@ def max2(x):
 
 # Practice 5: the exact day of the year
 def is_leap_year(year):
+    """
+    determine the year is leap year or not
+
+    :param year: year
+    :return: if leap year return True, else return False
+    """
     return year%4==0 and year%100!=0 or year%400==0
 
 def which_day(year, month, day):
+    """
+    计算日期为当年的第几天
+
+    :param year:　年
+    :param month:　月
+    :param day:　日
+    :return: 第几天
+    """
     days_of_month = [
         [31,28,31,30,31,30,31,31,30,31,30,31],
         [31,29,31,30,31,30,31,31,30,31,30,31]
