@@ -1,3 +1,4 @@
+# git check
 prices = {
     'AAPL': 191.88,
     'GOOG': 1186.96,
